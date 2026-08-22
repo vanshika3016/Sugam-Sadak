@@ -1,0 +1,114 @@
+@import 'tailwindcss';
+@import 'leaflet/dist/leaflet.css';
+
+@theme {
+  --font-sans: 'IBM Plex Sans', system-ui, sans-serif;
+
+  --color-ink: #0f172a;
+  --color-slate: #475569;
+  --color-muted: #94a3b8;
+  --color-border: #e2e8f0;
+  --color-surface: #ffffff;
+  --color-surface-recessed: #f8fafc;
+  --color-primary: #1d4ed8;
+  --color-primary-hover: #1e40af;
+  --color-success: #15803d;
+  --color-success-tint: #f0fdf4;
+  --color-warning: #b45309;
+  --color-warning-tint: #fffbeb;
+  --color-danger: #b91c1c;
+  --color-danger-tint: #fef2f2;
+
+  --radius-card: 10px;
+  --radius-control: 8px;
+  --radius-pill: 999px;
+
+  --shadow-card: 0 1px 2px rgba(15, 23, 42, 0.06), 0 1px 1px rgba(15, 23, 42, 0.04);
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    color: var(--color-ink);
+    background: var(--color-surface-recessed);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .text-display {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: 600;
+  }
+
+  .text-h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+  }
+
+  .text-h2 {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+  }
+
+  .text-h3 {
+    font-size: 0.9375rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+  }
+
+  .text-body {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+  }
+
+  .text-small {
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+  }
+
+  .text-caption {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .text-metric {
+    font-size: 1.75rem;
+    line-height: 2rem;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .font-mono-road {
+    font-family: ui-monospace, 'Cascadia Code', 'Segoe UI Mono', monospace;
+  }
+}
+
+.leaflet-container {
+  font-family: var(--font-sans);
+  z-index: 0;
+}
